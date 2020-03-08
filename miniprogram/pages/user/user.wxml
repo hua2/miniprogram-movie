@@ -1,0 +1,9 @@
+<!--miniprogram/pages/user/user.wxml-->
+<view  class="user">
+<open-data type="userAvatarUrl" class="user-avatar"></open-data>
+<open-data type="userNickName" class="user-nickname"></open-data>
+</view>
+<van-cell-group>
+  <van-cell title="当前用户openid:" label="{{openid}}" />
+</van-cell-group>
+<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class="user-info">获取用户信息</button>

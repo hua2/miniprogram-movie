@@ -1,0 +1,17 @@
+<!--pages/comment/comment.wxml-->
+<view class="comment">
+  <view class="comment-info" style="background-image:url({{moviecover}})">
+    <image src="{{moviecover}}" class="comment-img"></image>
+    <view class="comment-title">{{movietitle}}</view>
+  </view>
+  <van-cell-group title="评价">
+    <van-field value="{{ value }}" placeholder="请填写评价" border="{{ false }}" bind:change="onChange" />
+    <van-cell title="评分">
+      <van-rate slot="right-icon" value="{{ rate }}" bind:change="onRateChange" />
+    </van-cell>
+  </van-cell-group>
+  <view style="margin-top:8px">
+    <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" bind:delete="deleteImage" multiple="{{true}}" />
+  </view>
+  <van-button type="primary" block bindtap="submit">提交评价</van-button>
+</view>

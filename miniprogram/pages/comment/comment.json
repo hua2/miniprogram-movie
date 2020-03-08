@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-button": "@vant/weapp/button",
+    "van-rate": "@vant/weapp/rate",
+    "van-field": "@vant/weapp/field",
+    "van-cell": "@vant/weapp/cell",
+    "van-cell-group": "@vant/weapp/cell-group",
+      "van-uploader": "@vant/weapp/uploader"
+  }
+}

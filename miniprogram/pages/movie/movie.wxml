@@ -1,0 +1,16 @@
+<!--miniprogram/pages/movie/movie.wxml-->
+<view wx:for="{{movieList}}" wx:key="index" class="movies">
+  <image src="{{item.cover}}" class="movie-img"></image>
+  <view class="movie-content">
+    <view class="movie-title">{{item.title}}</view>
+    <view>评分:
+    <text class="movie-score">{{item.rate}}</text> 分
+    </view>
+    <view>
+    主演:
+    <text wx:for="{{item.casts}}" wx:key="index"> {{item}} </text>
+    </view>
+    <view>收藏：{{item.star}}</view>
+    <button class="movie-comment" size="mini" bindtap="goToComment" data-movieid="{{item.id}}" data-movieTitle="{{item.title}}" data-movieCover="{{item.cover}}">评价</button>
+    </view>
+  </view>
