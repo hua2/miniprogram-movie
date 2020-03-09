@@ -8,8 +8,8 @@ Page({
     movieid: '',
     movietitle: '',
     moviecover: '',
-    rate: 3,
-    value: '',
+    rate: 3, //评分
+    value: '', //评价的内容
     fileList: [],
   },
 
@@ -17,12 +17,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onChange(event){
+    console.log("111", event)
     this.setData({
       value:event.detail
     })
 
   },
   onRateChange(event) {
+    console.log("222", event)
     this.setData({
       rate: event.detail
     })
@@ -38,7 +40,7 @@ Page({
         data: {
           movieid: this.data.movieid,
           value: this.data.value,
-          rate: this.data.rate,
+          rate: this.data.rate, 
           fileList: this.data.fileList,
         }
       })

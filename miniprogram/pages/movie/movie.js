@@ -10,11 +10,10 @@ Page({
   goToComment(event) {
     console.log("event", event)
     wx.navigateTo({
-      url: '../comment/comment?movieid=' + event.target.dataset.movieid + '&movietitle='
-      + event.target.dataset.movietitle 
-        + '&moviecover='
-      + event.target.dataset.moviecover
-    })
+      url: `../comment/comment?movieid=${event.target.dataset.movieid}&movietitle=${
+        event.target.dataset.movietitle}
+        &moviecover=${event.target.dataset.moviecover}
+        `})
   },
   getMoviesList() {
     wx.showLoading({
